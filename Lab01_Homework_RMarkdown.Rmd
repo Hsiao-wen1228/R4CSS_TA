@@ -40,6 +40,7 @@ knitr::opts_chunk$set(echo = TRUE, results = 'hold', comment = '#>', error = TRU
 請把結果貼在`#### 結果`下方。
  
 #### 結果
+**你好**
 
 ### B. R code chunk 練習 (40 分) 
 

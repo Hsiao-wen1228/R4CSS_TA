@@ -1,6 +1,6 @@
 ---
 title: "Lab02_Homework_R-Basic"
-author: "你是誰 R09342000 新聞所碩五"
+author: "鄭曉雯 R08521807 土木所碩二"
 date: "2021/03/02"
 output:
   html_document:
@@ -26,8 +26,14 @@ knitr::opts_chunk$set(echo = TRUE, results = 'hold', comment = '#>', error = TRU
 
 ### A. vector (50 分) 
 
+<<<<<<< Updated upstream
 (1) 底下的 code chunk 中，有兩個長度不同的向量，`vector_01_left` 與 `vector_01_right` ，兩者相乘後並沒有出現錯誤。請解釋為什麼他們可以相乘而不會出現 error，結果的值又是怎麼計算得到的？<br>
 **把解釋寫在這**: 
+=======
+- (1)`vector_01_left` 與 `vector_01_right` 長度不等，請解釋兩者為什麼相乘不會出現 error，又為什麼得到那個值？
+- (1)回答:<font color=#FFD306>R會自動回收長度不同的向量，也就等於c(1,3,5,10,12)*c(2,3,2,3,2)，得出2,9,10,30,24。</font>
+
+>>>>>>> Stashed changes
 
 ```{r warning=FALSE}
 # (1)
@@ -41,11 +47,22 @@ vector_01_left*vector_01_right
 ```{r warning=FALSE}
 # (2)
 vector_02 <- c(1,3,5)
+vector_02
 ### your code
 # method01
-
+a<-c(1,0,0)
+vector_02 <-a+vector_02
+vector_02
 # method02
 
+<<<<<<< Updated upstream
+=======
+r<- 2
+s<- 3
+t<- 5
+vector_02 <- c(r,s,t)
+vector_02
+>>>>>>> Stashed changes
 ```
 
 ### B. list (50 分) 
@@ -61,12 +78,19 @@ list_final <- list(        c=list(1,  "g"),5,abc=list(6,4,list(FALSE)))
 
 ### your code
 # (1)
+list_true[[4]][[3]][[1]]
 
 # expected output
 # [1] TRUE
 
 
 # (2)
+list_true[1]<- NULL
+list_true$c[[2]]<- NULL
+list_true$abc[[3]][[1]]<- FALSE
+list_true
+list_final <- list_true
+list_final
 
 # check
 identical(list_true, list_final)

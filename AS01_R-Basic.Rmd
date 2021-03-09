@@ -32,6 +32,10 @@ knitr::opts_chunk$set(echo = TRUE, results = 'hold', comment = '#>', error = TRU
 
 ```{r}
 ### your code
+var_credits<-15
+var_perhour<-3
+var_study<-var_credits*var_perhour
+var_study
 
 ```
 
@@ -44,17 +48,20 @@ knitr::opts_chunk$set(echo = TRUE, results = 'hold', comment = '#>', error = TRU
 (3) 奇數位確診者的狀態
 
 ```{r}
-df <- read.csv("data/AS01/covid19_comfirmed_case_taiwan.csv")
+df <- read.csv("data/covid19_comfirmed_case_taiwan.csv")
 vector_gender <- df$gender[1:10]
 vector_age <- df$age[1:10]
 vector_state <- df$state[1:10]
 
 ### your code
 # (1)
+vector_gender[3]
 
 # (2)
+vector_age[5]
 
 # (3)
+vector_state[seq(1,length(vector_state),2)]
 
 # output should be
 #> [1] "male"
